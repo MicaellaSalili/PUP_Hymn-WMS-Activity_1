@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUP Hymn</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #830404;
+            color: white;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #830404;
+            font-size: 20px;
+            font-weight: auto;
+        }
+        .header img {
+            width: 60px;
+            margin-right: 20px;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            height: calc(100vh - 50px);
+        }
+        .left {
+            width: 50%;
+            padding: 85px;
+            background: linear-gradient(to left, black, #830404);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .lyrics {
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 1.6;
+            text-align: left;
+        }
+        .right {
+            width: 50%;
+            background: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .hymn-title {
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .pup-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+        }
+        .audio-player {
+            margin-top: 20px;
+        }
+        marquee {
+            height: 200px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="images/PUPLogo.png" 
+            alt="PUP Logo">
+        POLYTECHNIC UNIVERSITY OF THE PHILIPPINES
+    </div>
+    
+    <div class="container">
+        <div class="left">
+            <marquee behavior="scroll" direction="up" scrollamount="2" loop="true" class="lyrics">
+                Sintang Paaralan
+                    Tanglaw ka ng bayan <br>
+                    Pandayan ng isip ng kabataan <br>
+                    Kami ay dumating nang salat sa yaman <br>
+                    Hanap na dunong ay iyong alay <br>
+                    Ang layunin mong makatao <br>
+                    Dinarangal ang Pilipino <br>
+                    Ang iyong aral, diwa, adhikang taglay <br>
+                    PUP, aming gabay <br>
+                    Paaralang dakila <br>
+                    PUP, pinagpala <br>
+                    Gagamitin ang karunungan <br>
+                    Mula sa iyo, para sa bayan <br>
+                    Ang iyong aral, diwa, adhikang taglay <br>
+                    PUP, aming gabay <br>
+                    Paaralang dakila <br>
+                    PUP, pinagpala <br>
+            </marquee>
+        </div>
+
+        <div class="right">
+            <img src="images/pylon2022.jpg"
+                alt="PUP Monument" class="pup-image">
+            <div class="hymn-title">
+                <span style="color: #830404;">PUP</span> <span style="color: white;">HYMN</span>
+            </div>
+            <div class="audio-player">
+                <audio controls autoplay loop>
+                    <source src="assets/pup-hymn.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
