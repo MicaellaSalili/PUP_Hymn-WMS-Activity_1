@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PUP Hymn</title>
+    <link rel="icon" type="image/png" href="images/PUPLogo.png">
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #830404;
+            background: linear-gradient(to right, black, #590202 );
             color: white;
+            height: 100vh;
         }
         .header {
             display: flex;
@@ -19,32 +21,36 @@
             font-size: 20px;
         }
         .header img {
-            width: 60px;
-            margin-right: 20px;
+            width: 65px;
+            margin-right: 30px;
         }
         .container {
             display: flex;
             width: 100%;
-            height: calc(100vh - 50px);
+            height: calc(100vh - 125px);
         }
         .left {
             width: 50%;
             padding: 40px;
-            background: linear-gradient(to left, black, #830404);
             display: flex;
             align-items: center;
             justify-content: center;
         }
         .lyrics-container {
             width: 100%;
-            height: 300px;
+            height: 350px;
             overflow-y: auto;
             scroll-behavior: smooth;
-            padding: 10px;
+            padding: 30px;
             text-align: center;
+            scrollbar-width: none; /* For Firefox */
+            -ms-overflow-style: none; /* For Internet Explorer and Edge */
+        }
+        .lyrics-container::-webkit-scrollbar {
+            display: none; /* For Chrome, Safari, and Opera */
         }
         .lyric {
-            font-size: 24px;
+            font-size: 25px;
             font-weight: bold;
             padding: 10px 0;
             transition: color 0.3s;
@@ -54,7 +60,6 @@
         }
         .right {
             width: 50%;
-            background: black;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -74,6 +79,13 @@
         .audio-player {
             margin-top: 20px;
         }
+        .footer {
+            background-color: linear-gradient(to right, black, #590202 );
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+        
     </style>
 </head>
 <body>
@@ -101,6 +113,9 @@
                 </audio>
             </div>
         </div>
+    </div>
+    <div class="footer">
+        Copyright &copy; 2017 Polytechnic University of the Philippines ; Website by Micaella Salili
     </div>
 
     <script>
