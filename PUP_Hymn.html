@@ -1,213 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PUP Hymn</title>
-    <link rel="icon" type="image/png" href="images/PUPLogo.png">
+    <link rel="icon" type="image/png" href="images/PUPLogo.png" />
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, black, #590202 );
-            color: white;
-            height: 100vh;
-        }
-        .header {
-            display: flex;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #830404;
-            font-size: 20px;
-        }
-        .header img {
-            width: 65px;
-            margin-right: 30px;
-        }
-        .container {
-            display: flex;
-            width: 100%;
-            height: calc(100vh - 125px);
-        }
-        .left {
-            width: 50%;
-            padding-left: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .lyrics-container {
-            width: 100%;
-            height: 350px;
-            overflow-y: auto;
-            scroll-behavior: smooth;
-            padding: 30px;
-            text-align: center;
-            scrollbar-width: none; /* For Firefox */
-            -ms-overflow-style: none; /* For Internet Explorer and Edge */
-        }
-        .lyrics-container::-webkit-scrollbar {
-            display: none; /* For Chrome, Safari, and Opera */
-        }
-        .lyric {
-            font-size: 25px;
-            font-weight: bold;
-            padding: 10px 0;
-            transition: color 0.3s;
-        }
-        .active {
-            color: yellow;
-        }
-        .right {
-            width: 50%;
-            display: flex;
-            padding-right: 100px;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .hymn-title {
-            font-size: 25px;
-            font-weight: bold;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .pup-image {
-            width: 300px;
-            height: 300px;
-            border-radius: 10px;
-        }
-        .audio-player {
-            margin-top: 20px;
-        }
-        .footer {
-            background-color: linear-gradient(to right, black, #590202 );
-            text-align: center;
-            padding: 10px;
-            font-size: 14px;
-        }
-        
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, black, #590202);
+        color: white;
+        height: 100vh;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #830404;
+        font-size: 20px;
+      }
+      .header img {
+        width: 65px;
+        margin-right: 30px;
+      }
+      .container {
+        display: flex;
+        width: 100%;
+        height: calc(100vh - 125px);
+      }
+      .left {
+        width: 50%;
+        padding-left: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .lyrics-container {
+        width: 100%;
+        height: 350px;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        padding: 30px;
+        text-align: center;
+        scrollbar-width: none; /* For Firefox */
+        -ms-overflow-style: none; /* For Internet Explorer and Edge */
+      }
+      .lyrics-container::-webkit-scrollbar {
+        display: none; /* For Chrome, Safari, and Opera */
+      }
+      .lyric {
+        font-size: 25px;
+        font-weight: bold;
+        padding: 10px 0;
+        transition: color 0.3s;
+      }
+      .active {
+        color: yellow;
+      }
+      .right {
+        width: 50%;
+        display: flex;
+        padding-right: 100px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .hymn-title {
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .pup-image {
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+      }
+      .audio-player {
+        margin-top: 20px;
+      }
+      .footer {
+        background-color: linear-gradient(to right, black, #590202);
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header">
-        <img src="images/PUPLogo.png" alt="PUP Logo">
-        POLYTECHNIC UNIVERSITY OF THE PHILIPPINES
+      <img src="images/PUPLogo.png" alt="PUP Logo" />
+      POLYTECHNIC UNIVERSITY OF THE PHILIPPINES
     </div>
-    
+
     <div class="container">
-        <div class="left">
-            
-            <div class="lyrics-container" id="lyricsContainer">
-                <!-- Lyrics will be inserted dynamically here -->
-            </div>
+      <div class="left">
+        <div class="lyrics-container" id="lyricsContainer">
+          <!-- Lyrics will be inserted dynamically here -->
         </div>
-        <div class="right">
-            <img src="images/pylon2022.jpg" alt="PUP Monument" class="pup-image">
-            <div class="hymn-title">
-                <span style="color: white;">PUP HYMN</span>
-            </div>
-            <div class="audio-player">
-                <audio id="audio" controls autoplay loop>
-                    <source src="assets/pup-hymn.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
+      </div>
+      <div class="right">
+        <img src="images/multo.jpeg" alt="PUP Monument" class="pup-image" />
+        <div class="hymn-title">
+          <span style="color: white">walang katapusang multo</span>
         </div>
+        <div class="audio-player">
+          <audio id="audio" controls autoplay loop>
+            <source src="assets/multo.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
     </div>
     <div class="footer">
-        Copyright &copy; 2017 Polytechnic University of the Philippines ; Website by Micaella Salili
+      Copyright &copy; 2017 Polytechnic University of the Philippines ; Website
+      by Micaella Salili
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const audio = document.getElementById("audio");
-            const lyricsContainer = document.getElementById("lyricsContainer");
+      document.addEventListener("DOMContentLoaded", () => {
+        const audio = document.getElementById("audio");
+        const lyricsContainer = document.getElementById("lyricsContainer");
 
-            const lyricsData = [
-                { time: 0, text: "                 " },
-                { time: 13, text: "Sintang Paaralan" },
-                { time: 15, text: "Tanglaw ka ng bayan" },
-                { time: 19, text: "Pandayan ng isip ng kabataan" },
-                { time: 24, text: "Kami ay dumating nang salat sa yaman" },
-                { time: 30, text: "Hanap na dunong ay iyong alay" },
-                { time: 36, text: "Ang layunin mong makatao" },
-                { time: 42, text: "Dinarangal ang Pilipino" },
-                { time: 48, text: "Ang iyong aral, diwa, adhikang taglay" },
-                { time: 53, text: "PUP, aming gabay" },
-                { time: 56, text: "Paaralang dakila" },
-                { time: 63, text: "PUP, pinagpala" },
-                { time: 69, text: "Gagamitin ang karunungan" },
-                { time: 75, text: "Mula sa iyo, para sa bayan" },
-                { time: 81, text: "Ang iyong aral, diwa, adhikang taglay" },
-                { time: 87, text: "PUP, aming gabay" },
-                { time: 90, text: "Paaralang dakila" },
-                { time: 96, text: "PUP, pinagpala" }
-            ];
+        const lyricsData = [
+          { time: 24, text: "Humingang malalim, pumikit na muna" },
+          { time: 32, text: "At baka sakaling namamalikmata lang" },
+          { time: 42, text: "Ba't nababahala? 'Di ba't ako'y mag-isa?" },
+          { time: 50, text: "Kala ko'y payapa, boses mo'y tumatawag pa" },
+          { time: 60, text: "Binaon naman na ang lahat" },
+          { time: 65, text: "Tinakpan naman na 'king sugat" },
+          { time: 69, text: "Ngunit ba't ba andito pa rin?" },
+          { time: 74, text: "Hirap na 'kong intindihin" },
+          { time: 79, text: "Tanging panalangin, lubayan na sana" },
+          { time: 88, text: "Dahil sa bawat tingin, mukha mo'y nakikita" },
+          {
+            time: 98,
+            text: "Kahit sa'n man mapunta ay anino mo'y kumakapit sa 'king kamay",
+          },
+          { time: 106, text: "Ako ay dahan-dahang nililibing nang buhay pa" },
+          { time: 115, text: "Hindi na makalaya" },
+          { time: 119, text: "Dinadalaw mo 'ko bawat gabi" },
+          { time: 125, text: "Wala mang nakikita" },
+          { time: 129, text: "Haplos mo'y ramdam pa rin sa dilim" },
+          { time: 132, text: "Hindi na na-nanaginip" },
+          { time: 136, text: "Hindi na ma-makagising" },
+          { time: 140, text: "Pasindi na ng ilaw" },
+          { time: 144, text: "Minumulto na 'ko ng damdamin ko" },
+          { time: 148, text: "Ng damdamin ko" },
+          { time: 152, text: "Makalaya" },
+          { time: 154, text: "(hindi mo ba ako lilisanin?)" },
+          { time: 157, text: "Dinadalaw mo 'ko bawat gabi" },
+          { time: 160, text: "(hindi pa ba sapat pagpapahirap sa 'kin?)" },
+          { time: 164, text: "Wala mang nakikita" },
+          { time: 166, text: "(hindi na ba ma-mamamayapa?)" },
+          { time: 169, text: "Haplos mo'y ramdam pa rin sa dilim" },
+          { time: 174, text: "(hindi na ba ma-mamamayapa?)" },
+          { time: 180, text: "Hindi na makalaya" },
+          { time: 185, text: "Dinadalaw mo 'ko bawat gabi" },
+          { time: 190, text: "Wala mang nakikita" },
+          { time: 195, text: "Haplos mo'y ramdam pa rin sa dilim" },
+          { time: 200, text: "Hindi na na-nanaginip" },
+          { time: 205, text: "Hindi na ma-makagising" },
+          { time: 210, text: "Pasindi na ng ilaw" },
+          { time: 215, text: "Minumulto na 'ko ng damdamin ko" },
+          { time: 220, text: "Ng damdamin ko" },
+          { time: 225, text: "Ng damdamin ko" },
+          { time: 230, text: "Ng damdamin ko..." },
+          { time: 235, text: "" }, // End of song
+        ];
 
-            // Populate lyrics in the container
-            lyricsData.forEach(lyric => {
-                const lyricElement = document.createElement("div");
-                lyricElement.classList.add("lyric");
-                lyricElement.setAttribute("data-time", lyric.time);
-                lyricElement.textContent = lyric.text;
-                lyricsContainer.appendChild(lyricElement);
+        // Populate lyrics in the container
+        lyricsData.forEach((lyric) => {
+          const lyricElement = document.createElement("div");
+          lyricElement.classList.add("lyric");
+          lyricElement.setAttribute("data-time", lyric.time);
+          lyricElement.textContent = lyric.text;
+          lyricsContainer.appendChild(lyricElement);
+        });
+
+        function updateLyrics() {
+          const currentTime = Math.floor(audio.currentTime);
+          let activeLyric = null;
+
+          document.querySelectorAll(".lyric").forEach((lyric) => {
+            const lyricTime = parseInt(lyric.getAttribute("data-time"));
+            if (currentTime >= lyricTime) {
+              if (
+                !activeLyric ||
+                lyricTime > parseInt(activeLyric.getAttribute("data-time"))
+              ) {
+                activeLyric = lyric;
+              }
+            }
+          });
+
+          if (activeLyric) {
+            document.querySelectorAll(".lyric").forEach((lyric) => {
+              lyric.classList.remove("active");
             });
 
-            function updateLyrics() {
-                const currentTime = Math.floor(audio.currentTime);
-                let activeLyric = null;
+            activeLyric.classList.add("active");
 
-                document.querySelectorAll(".lyric").forEach(lyric => {
-                    const lyricTime = parseInt(lyric.getAttribute("data-time"));
-                    if (currentTime >= lyricTime) {
-                        if (!activeLyric || lyricTime > parseInt(activeLyric.getAttribute("data-time"))) {
-                            activeLyric = lyric;
-                        }
-                    }
-                });
+            // Scroll to the active lyric smoothly
+            lyricsContainer.scrollTo({
+              top: activeLyric.offsetTop - lyricsContainer.offsetTop,
+              behavior: "smooth",
+            });
+          }
+        }
 
-                if (activeLyric) {
-                    document.querySelectorAll(".lyric").forEach(lyric => {
-                        lyric.classList.remove("active");
-                    });
+        function attemptAutoplay() {
+          audio
+            .play()
+            .then(() => {
+              console.log("Audio playing successfully.");
+            })
+            .catch((error) => {
+              console.log("Autoplay blocked. Retrying on user interaction...");
+              document.body.addEventListener("click", playOnInteraction, {
+                once: true,
+              });
+            });
+        }
 
-                    activeLyric.classList.add("active");
+        function playOnInteraction() {
+          audio
+            .play()
+            .then(() => {
+              console.log("Audio started after user interaction.");
+            })
+            .catch((error) => {
+              console.log("Still unable to play audio.", error);
+            });
+        }
 
-                    // Scroll to the active lyric smoothly
-                    lyricsContainer.scrollTo({
-                        top: activeLyric.offsetTop - lyricsContainer.offsetTop,
-                        behavior: "smooth"
-                    });
-                }
-            }
+        // Ensure the audio loops and restarts properly
+        audio.loop = true;
 
-            function attemptAutoplay() {
-                audio.play().then(() => {
-                    console.log("Audio playing successfully.");
-                }).catch(error => {
-                    console.log("Autoplay blocked. Retrying on user interaction...");
-                    document.body.addEventListener("click", playOnInteraction, { once: true });
-                });
-            }
+        // Attempt autoplay
+        attemptAutoplay();
 
-            function playOnInteraction() {
-                audio.play().then(() => {
-                    console.log("Audio started after user interaction.");
-                }).catch(error => {
-                    console.log("Still unable to play audio.", error);
-                });
-            }
-
-            // Ensure the audio loops and restarts properly
-            audio.loop = true;
-
-            // Attempt autoplay
-            attemptAutoplay();
-
-            // Update lyrics in real-time
-            audio.addEventListener("timeupdate", updateLyrics);
-        });
+        // Update lyrics in real-time
+        audio.addEventListener("timeupdate", updateLyrics);
+      });
     </script>
-</body>
+  </body>
 </html>
